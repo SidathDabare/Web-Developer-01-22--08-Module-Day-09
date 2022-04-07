@@ -132,6 +132,10 @@ console.log(upperFirst("fullstack"));
 */
 printTitle("EXERCISE 9");
 /* WRITE YOUR ANSWER HERE */
+function cutString(string) {
+  return string.slice(1, -1);
+}
+console.log(cutString("fullstack"));
 
 /* EXERCISE 10
  Write a function called "giveMeRandom" which accepts a number n and returns an array containing 
@@ -139,6 +143,16 @@ printTitle("EXERCISE 9");
 */
 printTitle("EXERCISE 10");
 /* WRITE YOUR ANSWER HERE */
+function giveMeRandom(n) {
+  let newArray = [];
+  if (n >= 0 && n <= 10) {
+    newArray = n.split("");
+    return newArray;
+  } else {
+    return false;
+  }
+}
+console.log(giveMeRandom(8));
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the
