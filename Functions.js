@@ -17,7 +17,7 @@ function printTitle(title) {
 printTitle("EXERCISE 1");
 /* WRITE YOUR ANSWER HERE */
 function area(l1, l2) {
-  let sum = l1 + l2;
+  let sum = l1 * l2;
   return sum;
 }
 console.log(area(4, 4));
@@ -81,18 +81,20 @@ console.log(boundary(101));
 */
 printTitle("EXERCISE 5");
 /* WRITE YOUR ANSWER HERE */
-let strive = "Strive ";
+
+let strive = "Strive";
 function strivify(str) {
   let word;
-  if (!str === strive) {
-    word = strive + str;
+  if (str.startsWith(strive)) {
+    word = str;
     return word;
   } else {
-    word = strive;
+    word = strive + " " + str;
     return word;
   }
 }
-console.log(strivify("is cool"));
+console.log(strivify("Strive"));
+console.log(strivify("Sidath"));
 
 /* EXERCISE 6
  Write a function called "check3and7" which accepts a positive number as a parameter and checks if it 
@@ -101,6 +103,14 @@ console.log(strivify("is cool"));
 */
 printTitle("EXERCISE 6");
 /* WRITE YOUR ANSWER HERE */
+function check3and7(num) {
+  if (num % 3 === 0 || num % 7 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(check3and7(25));
 
 /* EXERCISE 7
  Write a function called "reverseString" which programmatically reverses a given string 
@@ -144,15 +154,14 @@ console.log(cutString("fullstack"));
 printTitle("EXERCISE 10");
 /* WRITE YOUR ANSWER HERE */
 function giveMeRandom(n) {
-  let newArray = [];
-  if (n >= 0 && n <= 10) {
-    newArray = n.split("");
-    return newArray;
-  } else {
-    return false;
+  let arrayOfRandom = [];
+  for (let i = 0; i < n; i++) {
+    let randomNumber = Math.ceil(Math.random() * 10);
+    arrayOfRandom.push(randomNumber);
   }
+  console.log(arrayOfRandom);
 }
-console.log(giveMeRandom(8));
+giveMeRandom(40);
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the
